@@ -1,0 +1,250 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+ *= require change_layout/vendors
+ *= require change_layout/jquery.minicolors.css
+ *= require change_layout/spectrum
+ *= require change_layout/jquery.raty
+ *= require change_layout/jkanban.min
+ *= require change_layout/dragula.min
+ *= require change_layout/dataTables.bootstrap4.min.css
+ *= require change_layout/icheck
+ *= require change_layout/custom
+ *= require change_layout/fullcalendar.min
+ *= require change_layout/daygrid.min
+ *= require change_layout/jquery-ui.min.css
+ *= require change_layout/invoice
+ *= require change_layout/app
+ *= require change_layout/vertical-menu-modern
+ *= require change_layout/vertical-content-menu.min
+ *= require change_layout/palette-gradient
+ *= require change_layout/colorpicker
+ *= require change_layout/palette-switch
+ *= require change_layout/add-on-drag-drop
+ *= require change_layout/loaders.min
+ *= require change_layout/palette-loader.min
+ *= require change_layout/chat-application
+ *= require change_layout/checkboxes-radios.css
+ *= require change_layout/fonts/simple-line-icons/simple-style.css.scss
+ *= require change_layout/nouislider.min
+ *= require change_layout/noui-slider.css
+ *= require change_layout/palette-noui
+ *= require change_layout/fullcalendar.css
+ *= require change_layout/spinkit.min
+ *= require change_layout/style
+ *= require toastr.min
+ *= require toastr
+
+ */
+//overlay {
+//  background-color:#EFEFEF;
+//  position: fixed;
+//  width: 100%;
+//  height: 100%;
+//  z-index: 1000;
+//  top: 0px;
+//  left: 0px;
+//  opacity: .5; /* in FireFox */
+//  filter: alpha(opacity=50); /* in IE */
+//}
+
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  html body {
+    background-color: #ffffff !important;
+  }
+  body.vertical-layout.vertical-menu-modern.menu-collapsed .content, body.vertical-layout.vertical-menu-modern.menu-collapsed .footer {
+     margin-left: 0px; 
+  }
+  .navbar {
+    align-items: end;
+   }
+  .height {
+    height: 100% !important;
+  }
+  .card {
+    box-shadow: 0 0px 0px 0px rgba(49, 53, 72, 0.1);
+  }
+  .flex_dispaly {
+    display: flex;
+    align-items: end !important;
+  }
+  .footer {
+    margin-left: 0px !important;
+  } 
+  .nav {
+      justify-content: space-between;
+  }
+  .nav.nav-tabs.nav-topline .nav-item a {
+    border: 0;
+    border-bottom: none;
+  }
+  .nav.nav-tabs.nav-topline .nav-item a.nav-link {
+    background: white;
+  }
+  .main_body_center {
+    width: 100% !important;
+    margin: 0px !important;
+  }
+  .header-navbar {
+    padding: 0px;
+    min-height: 5rem;
+    font-family: "Quicksand", Georgia, "Times New Roman", Times, serif;
+    transition: 300ms ease all;
+    border: 1px solid #ddd;
+  }
+  .badge-up {
+    position: absolute !important;
+    top: 10px !important;
+    right: 11px !important;
+    font-size: 90% !important;
+  }
+  .badge-down {
+      position: absolute !important;
+      top: 0px !important;
+      right: -10px !important;
+      font-size: 90% !important;
+  }
+  .web_view {
+    display: none;
+    visibility: hidden;
+  }
+  .mob_view {
+    visibility: visible !important;;
+  }
+  .nav.nav-tabs.nav-topline .nav-item a.nav-link.active {
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    border-top-color: #ff4961;
+    border-bottom: none;
+  }
+}
+
+.web_view {}
+.mob_view {
+  visibility: hidden;
+}
+body{
+  font-family: Arial, Sans;
+  margin: 0;
+}
+.wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  text-align:center;
+  transform: translateX(-50%);
+}
+.spanner{
+  position:absolute;
+  top: 50%;
+  left: 0;
+  background: #2a2a2a55;
+  width: 100%;
+  display:block;
+  text-align:center;
+  height: 100%;
+  color: #FFF;
+  transform: translateY(-50%);
+  z-index: 1000;
+  visibility: hidden;
+}
+.overlay{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  visibility: hidden;
+}
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out;
+}
+.loader {
+
+  top: 50%;
+  left: 50%;
+  color: #ffffff;
+  font-size: 10px;
+  //margin-left: 80px auto;
+  margin-left: -4em;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+.loader:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 3.5em;
+}
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+.show{
+  visibility: visible;
+}
+.spanner, .overlay {
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.spanner.show { opacity: 1}
+.overlay.show { opacity: 1}
+.select2-container {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    vertical-align: middle;
+    width: 100% !important;
+}

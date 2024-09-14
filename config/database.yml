@@ -1,0 +1,25 @@
+default: &default
+  adapter: postgresql
+  pool: 25
+  encoding: unicode
+  timeout: 100000
+  reconnect: true
+  host: localhost
+ 
+development:
+  <<: *default
+  database: development_task_manager
+  host: localhost
+  reconnect: true
+
+test:
+  <<: *default
+  database: test_task_manager
+  host: localhost
+  reconnect: true
+
+production:
+  <<: *default
+  database: production_task_manager
+  host: localhost
+  reconnect: true

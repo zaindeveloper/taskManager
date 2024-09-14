@@ -1,0 +1,16 @@
+
+
+
+<% if @task.errors.present? %>
+<% @task.errors.full_messages.each do |error| %>
+alert("<%= error %>");
+
+<% end %>
+
+<% else %>
+
+$("#task_id_title<%=@task.id %>").html("Task# <%= @task.id %> , <%= @task.title %>");
+$("#task_worked_hours<%=@task.id %>").html("<%= @task.total_worked_time %> worked");
+$("#task_form").modal('toggle');
+
+<% end %>

@@ -1,0 +1,13 @@
+$("#calendar_header").html("<%= escape_javascript(render('calendar_heading',current_year: @year ,current_week: @next_week_number ))%>");
+$("#calendar_links").html("<%= escape_javascript(render('calendar_links'))%>");
+$("#calendar_body").html("<%= escape_javascript(render('task_boxes',current_year: @year ,current_week: @next_week_number ))%>");
+
+$(".datepicker-default").datepicker({dateFormat: 'yy-mm-dd',firstDay: 1}); 
+$(".datepicker-default" ).on( "change", function() {
+  $.ajax({
+    type: "GET",
+    dataType: "script",
+    url: "/tasks?selected_date="+$("#start_date_time").val(),
+    success: function(data){}
+  });
+});

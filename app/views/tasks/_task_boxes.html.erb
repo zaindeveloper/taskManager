@@ -1,0 +1,41 @@
+<td class="table_data_box" id = "task_box<%= Date.commercial(current_year, current_week,1)%>">   
+  <% current_user.tasks.from_date(Date.commercial(current_year, current_week , 1)).to_date(Date.commercial(current_year, current_week , 1)).each do |task|  %>
+    <%= render partial: "tasks/task_box" ,locals: {task: task } %>
+  <% end %>
+</td>
+
+<td class="table_data_box" id = "task_box<%= Date.commercial(current_year, current_week,2)%>">
+  <% current_user.tasks.from_date(Date.commercial(current_year, current_week , 2)).to_date(Date.commercial(current_year, current_week , 2)).each do |task|  %>
+    <%= render partial: "tasks/task_box" ,locals: {task: task } %>
+  <% end %>  
+</td>
+
+<td class="table_data_box" id = "task_box<%= Date.commercial(current_year, current_week,3)%>" >              
+  <% current_user.tasks.from_date(Date.commercial(current_year, current_week , 3)).to_date(Date.commercial(current_year, current_week , 3)).each do |task|  %>
+    <%= render partial: "tasks/task_box" ,locals: {task: task } %>
+  <% end %>  
+</td>
+
+<td class="table_data_box" id = "task_box<%= Date.commercial(current_year, current_week,4)%>" >    
+  <% current_user.tasks.from_date(Date.commercial(current_year, current_week , 4)).to_date(Date.commercial(current_year, current_week , 4)).each do |task|  %>
+    <%= render partial: "tasks/task_box" ,locals: {task: task } %>
+  <% end %>
+</td>
+
+<td class="table_data_box" id = "task_box<%= Date.commercial(current_year, current_week,5)%>">  
+  <% current_user.tasks.from_date(Date.commercial(current_year, current_week , 5)).to_date(Date.commercial(current_year, current_week , 5)).each do |task|  %>
+    <%= render partial: "tasks/task_box" ,locals: {task: task } %>
+  <% end %>   
+</td>
+
+<td class="table_data_box" id = "task_box<%= Date.commercial(current_year, current_week,6)%>" >                   
+  <% current_user.tasks.from_date(Date.commercial(current_year, current_week , 6)).to_date(Date.commercial(current_year, current_week , 6)).each do |task|  %>
+    <%= render partial: "tasks/task_box" ,locals: {task: task } %>
+  <% end %>
+</td>
+
+<td class="table_data_box" id = "task_box<%= Date.commercial(current_year, current_week,7)%>" >     
+  <% current_user.tasks.from_date(Date.commercial(current_year, current_week , 7)).to_date(Date.commercial(current_year, current_week , 7)).each do |task|  %>
+   <%= render partial: "tasks/task_box" ,locals: {task: task } %>
+  <% end %>
+</td>

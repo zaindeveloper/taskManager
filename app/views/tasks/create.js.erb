@@ -1,0 +1,8 @@
+<% if @task.errors.present? %>
+	<% @task.errors.full_messages.each do |error| %>
+	  alert("<%= error %>");
+	<% end %>
+<% else %>
+$("#task_box<%= @task.start_time.to_date %>").prepend("<%= escape_javascript(render( 'task_box' , task: @task))%>");
+$("#task_form").modal('toggle');
+<% end %>

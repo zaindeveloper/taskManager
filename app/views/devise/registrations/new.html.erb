@@ -1,0 +1,76 @@
+<div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="content-wrapper">
+            <div class="content-header row">
+            </div>
+            <div class="content-body">
+                <section class="row flexbox-container">
+                    <div class="col-12 d-flex align-items-center justify-content-center">
+                        <div class="col-lg-4 col-md-8 col-10 box-shadow-2 p-0">
+                            <div class="card border-grey border-lighten-3 m-0">
+                                <div class="card-header border-0">
+                                    <div class="card-title text-center">
+                                        <div class="p-1">
+                                                                               
+                                        </div>
+                                    </div>
+                                    <h6 class="card-subtitle line-on-side text-muted text-center font-small-3 pt-2"><span>Login with Task Manager</span>
+                                    </h6>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                      <%= form_for(resource, as: resource_name, url: registration_path(resource_name) ,class:"form-horizontal form-simple") do |f| %>
+
+                                            <fieldset class="form-group position-relative has-icon-left ">
+                                                <%= f.text_field :first_name, placeholder: "First Name", class: "form-control" %>
+                                                <div class="form-control-position">
+                                                  <i class="la la-user"></i>
+                                                </div>
+                                            </fieldset>
+
+                                            <fieldset class="form-group position-relative has-icon-left ">
+                                                <%= f.text_field :last_name, placeholder: "Last Name", class: "form-control" %>
+                                                <div class="form-control-position">
+                                                  <i class="la la-user"></i>
+                                                </div>
+                                            </fieldset>
+
+                                            <fieldset class="form-group position-relative has-icon-left ">
+                                                <%= f.email_field :email, placeholder: "Email", class: "form-control" %>
+                                                <div class="form-control-position">
+                                                  <i class="la la-user"></i>
+                                                </div>
+                                            </fieldset>
+
+                                            <fieldset class="form-group position-relative has-icon-left">
+                                                <%= f.password_field :password, placeholder: "Password", class: "form-control" %>
+                                                <div class="form-control-position">
+                                                  <i class="la la-key"></i>
+                                                </div>
+                                            </fieldset>
+
+                                            <fieldset class="form-group position-relative has-icon-left">
+                                                <%= f.password_field :password_confirmation, placeholder: "Password Confirmat", class: "form-control" %>
+                                                <div class="form-control-position">
+                                                  <i class="la la-key"></i>
+                                                </div>
+                                            </fieldset>
+
+                                            <button type="submit" class="btn btn-info btn-block"><i class="ft-unlock"></i> Login</button>
+                                        <% end %>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="">
+                                  
+                                        <p class="text-center m-0">New to Task Manager <a href="<%= new_registration_path(resource_name) %>" class="card-link">Sign Up</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>

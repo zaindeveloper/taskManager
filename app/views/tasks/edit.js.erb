@@ -1,0 +1,13 @@
+$("#task_form").html("<%= escape_javascript(render 'form')%>");
+
+
+ $( ".datepicker-default" ).datepicker({ dateFormat: 'yy-mm-dd' , firstDay: 1 });
+  
+  $('.datetimepicker').datetimepicker({
+    sideBySide: true,
+    format : 'YYYY-MM-DD HH:mm',
+    allowInputToggle: true,
+    locale:  moment.locale('en', {
+      week: { dow: 1 }
+    }),
+  });
